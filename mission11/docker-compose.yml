@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mission11:
+    image: jupyter/base-notebook
+    container_name: mission11
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work/
+    command: start-notebook.sh --NotebookApp.token=''
